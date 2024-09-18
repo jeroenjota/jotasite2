@@ -1,0 +1,19 @@
+mixin tour(tour, fotos)
+  .card.text-bg-light.border-info.border.border-3
+    .card-header.bg-info.bg-gradient.text-body.fw-bold.fs-4
+      .text-center
+        a(href=tour.tblLink target="_blank").text-light= tour.tournaam
+    .row.align-items-center
+      - var id = tour.tournaam
+      .col-5
+        #carouselExampleSlidesOnly.carousel.slide.carousel-fade(data-mdb-ride='carousel' data-mdb-carousel-init)
+          .carousel-inner
+            each foto, index in fotos
+              if foto.tourID == tour.id
+                - var actief = foto.volgorde == 1 ? "active" : ""
+                .carousel-item(class=actief)
+                  img.d-block.w-100(src=foto.foto)
+      .col-7
+        .container
+          p.card-text.bg-light= tour.omschrijving
+          p.text-end Duur: #{tour.duur} uur

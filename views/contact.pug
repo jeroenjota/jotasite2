@@ -1,0 +1,38 @@
+extends layout.pug
+
+block content
+  .card.text-bg-light.mb-5
+    .container
+      .card-header 
+        h1.text-primary Contact
+      .contact-bg
+        container
+        .card-body
+          h3.fw-bold.text-center.mb-2 Mijn gegevens
+          .row
+            .col-lg-3
+              img(src="./img/logo.jpg" width="70%")
+              #carouselExampleSlidesOnly.carousel.slide.carousel-fade(data-mdb-ride='carousel' data-mdb-carousel-init)
+                .carousel-inner
+                  each foto, index in fotos
+                    - var actief = foto.volgorde == 1 ? "active" : ""
+                    .carousel-item(class=actief)
+                      img.d-block.w-100(src=foto.foto)
+
+            .col-lg-9
+              form(action="/handleEmail" method="POST" )
+                .form-outline0.0mb-4(data-mdb-input-init)
+                  label.form-label(for="naam") Naam 
+                  input.form-control(type="text" id="naam" name="naam" placeholder="Uw naam" required)
+                .form-outline0.mb-4(data-mdb-input-init)
+                  label.form-label(for="email") Email
+                  input.form-control(type="email" id="email" name="email" placeholder="Uw email" required)
+                .form-outline0.mb-4(data-mdb-input-init)
+                  label.form-label(for="email") Eventuele toelichting/vraag
+                  textarea.form-control.mb-4(name="msg" id="msg" rows="4") 
+                //- .form-check.d-flex.justify-content-center.mb-4
+                //-   input.form-check-input.me-2(type="checkbox" value="" name="chkCopy" id="sendcopy" checked )
+                //-   label.form-check-label(for="sendcopy") Stuur mij een kopie van mijn bericht
+                button.btn.btn-primary.btn-block.mb-4(name="send" type="submit" data-mdb-ripple-init) Neem contact met mij op
+
+

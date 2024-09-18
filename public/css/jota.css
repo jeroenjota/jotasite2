@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* OVERRIDE GOOGLE TRANSLATE WIDGET CSS BEGIN */
+div#google_translate_element div.goog-te-gadget-simple {
+  border: none;
+  background-color: transparent;
+  /*background-color: #17548d;*/
+  /*#e3e3ff*/
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value:hover {
+  text-decoration: none;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span {
+  color: #aaa;
+}
+
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span:hover {
+  color: white;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+  /*background: url("url for the icon") 0 0 no-repeat !important;*/
+}
+
+/* Remove the down arrow */
+/* when dropdown open */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(213, 213, 213);"] {
+  display: none;
+}
+
+/* after clicked/touched */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(118, 118, 118);"] {
+  display: none;
+}
+
+/* on page load (not yet touched or clicked) */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="color: rgb(155, 155, 155);"] {
+  display: none;
+}
+
+/* Remove span with left border line | (next to the arrow) in Chrome & Firefox */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left: 1px solid rgb(187, 187, 187);"] {
+  display: none;
+}
+
+/* Remove span with left border line | (next to the arrow) in Edge & IE11 */
+div#google_translate_element div.goog-te-gadget-simple a.goog-te-menu-value span[style="border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;"] {
+  display: none;
+}
+
+/* HIDE the google translate toolbar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+/* OVERRIDE GOOGLE TRANSLATE WIDGET CSS END */
+
+
+body {
+  top: 0px !important;
+}
+
+body {
+  font-family: 'Garamond';
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* body>.skiptranslate {
+  display: none;
+}
+ */
+
+:root {
+  --main-head-color: #1133af;
+  --main-bg-color: #24397f;
+  --positive-color: #81da5e;
+  --or-color: #f1e3bd;
+  --link-bg: rgb(189, 73, 0);
+  --link-fg: rgb(227, 225, 159);
+  --navbar-bg: #87d5e7;
+}
+
+.main-bg-color {
+  background-color: var(--main-bg-color);
+  color: white;
+}
+
+.navbar-bg-color {
+  background-color: var(--navbar-bg);
+}
+
+h1,
+h2,
+h4 {
+  font-family: 'Garamond', serif;
+}
+
+h2,
+a {
+  text-decoration: none;
+}
+
+ul {
+  font-size: 2rem;
+  padding-inline-start: 0%;
+}
+
+li.nav-item {
+  font-size: 1.6rem;
+  list-style: none;
+  font-weight: 200;
+  font-style: normal;
+}
+
+
+/* legal list styles */
+#legal-list {
+  counter-reset: section;
+}
+
+#legal-list h4:before {
+  counter-increment: section;
+  content: counter(section) ".";
+  margin: 0 0.5em 0 0;
+}
+
+#legal-list ol {
+  counter-reset: clause;
+  list-style: none outside none;
+  text-indent: -1.7em;
+}
+
+#legal-list ol li {
+  counter-increment: clause;
+}
+
+#legal-list ol li:before {
+  content: counter(section) "." counters(clause, ".");
+  margin: 0 0.5em 0 0;
+}
+
+nav li {
+  font-size: 1.2rem;
+}
+
+.nav-link {
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.transp {
+  opacity: .8;
+}
+
+.untransp {
+  opacity: 1;
+}
+
+.card .tour {
+  color: black;
+  text-shadow: none;
+  opacity: .7;
+  font-size: 2rem;
+  /* height: 20%; */
+  min-height: 200px;
+  max-height: 240px;
+}
+
+.large {
+  font-size: 4vw;
+}
+
+.card img.list {
+  /* width: 100%; */
+  /* height: 90%; */
+  max-height: 240px;
+  margin-left: 10px;
+  height: auto;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.mainpage {
+  background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, 0.7)), url('../img/amsterdam012.jpg');
+  background-size: cover;
+  height: 100%;
+  color: #022a99;
+  /* text-shadow: 3px 5px 2px #474747; */
+  /* text-shadow: 4px 4px 2px rgba(255, 255, 255, 0.6); */
+}
+
+.jotainfo {
+  /* text-shadow: 2px 2px 2px rgb(255, 255, 255); */
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  /* background-color: var(--navbar-bg); */
+}
+
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0px 0px 6px 0px #808080b3;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form form input,
+.form form textarea {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
+  outline: none;
+}
+
+.form form label {
+  margin-top: 7px;
+}
+
+.form button {
+  margin-top: 10px;
+  padding: 4px 10px;
+  font-size: 1rem;
+  border: 1px solid gray;
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+.form-outline .form-control {
+  border: 1px solid;
+  border-color: black;
+}
+
+.bg-yellow {
+  background-color: rgb(245, 245, 105);
+}
+
+.contact-bg {
+  margin-top: 0px;
+  background: linear-gradient(rgba(255, 255, 255, .9), rgba(255, 255, 255, 0.9)), url('../img/breek.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.carousel-inner {
+  height: 0;
+  padding-bottom: 75%;
+  /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+  position: absolute !important;
+  /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 20px;
+}
+
+.carousel-item img {
+  height: 90%;
+  margin-top: 5px;
+  /* Bootstrap handles width already */
+  object-fit: contain;
+  /* or 'contain' if you want stretch instead of crop */
+}
