@@ -9,7 +9,7 @@ mixin tour(tour, fotos)
         #carouselExampleSlidesOnly.carousel.slide.carousel-fade(data-mdb-ride='carousel' data-mdb-carousel-init)
           .carousel-inner
             each foto, index in fotos
-              if foto.tourID == tour.id
+              if foto.tourID == tour.ID
                 - var actief = foto.volgorde == 1 ? "active" : ""
                 .carousel-item(class=actief)
                   img.d-block.w-100(src=foto.foto)

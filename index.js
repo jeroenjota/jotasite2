@@ -39,11 +39,11 @@ app.get("/tours", (req, res) => {
   // tours is een tabel
   let qryTours = "select t.id, t.tournaam, t.duur, t.omschrijving, t.soort, t.tblLink "
   qryTours += " from tours t where actief = true order by t.volgorde"
-  db.query(qryTours, (err, tours) => {
+  db.all(qryTours, (err, tours) => {
     if (err) throw err;
     // tourfotos is een view 
-    let qryFotos = "select tourID, foto, volgorde from tourfotos ORDER BY tourID, volgorde "
-    db.query(qryFotos, (err, fotos) => {
+    let qryFotos = "select * from tourfotos"
+    db.all(qryFotos, (err, fotos) => {
       if (err) throw err;
       let locals = {
         title: "Tours",
