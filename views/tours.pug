@@ -4,15 +4,13 @@ include mixins/tour.pug
 block content
   .row
     .container
-      h5.text-center.jotainfo.text-primary klik op de tournaam voor de ToursByLocals link
+      h3.text-center klik op de tournaam om te boeken
     .col-lg-6.untransp
-      ul Binnen de stad
       each tour in tours
         if tour.soort==="Stad"
           li.mt-2
             +tour(tour, fotos)
     .col-lg-6.untransp
-      ul Buiten de stad
       each tour in tours
         if tour.soort!=="Stad"
           li.mt-2
