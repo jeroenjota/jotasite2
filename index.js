@@ -18,7 +18,7 @@ app.set('views', path.join(__dirname, "/views"))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // routes
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   let locals = { title: "Home" }
   res.render('index', locals)
 })
@@ -34,7 +34,7 @@ app.get("/conditions", (req, res) => {
   res.render('voorwaarden', locals)
 })
 
-app.get("/tours", (req, res) => {
+app.get("/", (req, res) => {
   // open de recordsets tours en fotos 
   // tours is een tabel
   let qryTours = "select t.id, t.tournaam, t.duur, t.omschrijving, t.soort, t.tblLink "
