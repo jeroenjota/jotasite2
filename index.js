@@ -38,7 +38,7 @@ app.get("/", (req, res) => {
   // open de recordsets tours en fotos 
   // tours is een tabel
   let qryTours = "select t.id, t.tournaam, t.duur, t.omschrijving, t.soort, t.tblLink "
-  qryTours += " from tours t where actief = true order by t.volgorde"
+  qryTours += " from tours t where actief = 1 order by t.volgorde"
   db.all(qryTours, (err, tours) => {
     if (err) throw err;
     // tourfotos is een view 

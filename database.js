@@ -19,12 +19,12 @@
 
 const sqlite3 = require('sqlite3').verbose()
 require('dotenv').config()
-
+const dbName = 'jota.db'
 const db = new sqlite3.Database('./jota.db', (err) => {
   if (err) {
     console.log(err.message)
   }
-  console.log("Connected to database " + process.env.dbName)
+  console.log("Connected to database " + dbName)
 })
 
 module.exports = db
