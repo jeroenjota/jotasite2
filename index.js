@@ -30,8 +30,8 @@ app.get("/about", (req, res) => {
 
 
 app.get("/conditions", (req, res) => {
-  let locals = { title: "Voorwaarden" }
-  res.render('voorwaarden', locals)
+  let locals = { title: "Conditions" }
+  res.render('voorwaarden-en', locals)
 })
 
 app.get("/", (req, res) => {
