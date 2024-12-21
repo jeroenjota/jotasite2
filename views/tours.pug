@@ -1,6 +1,5 @@
 extends layout.pug
 include mixins/tour.pug
-
 block content
   .row
     .col-lg-6.untransp
@@ -13,4 +12,5 @@ block content
         if tour.soort!=="Stad"
           li.mt-2
             +tour(tour, fotos)
+          
 

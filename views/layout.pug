@@ -43,6 +43,9 @@ html(lang="en-US")
       include jumbotron
 
       main.mb-8
+        .banner 
+          h1 Book my tours at 
+            a(href="https://www.jotatours.nl") www.jotatours.nl
         block content
 
       //- public/js/mdb.umd.min.js
@@ -53,8 +56,6 @@ html(lang="en-US")
           a(href="http://www.jota.nl").text-light Jota Services
 
     script(type='text/javascript' src='./js/mdb.umd.min.js').
-    
-
-    
-    
-
+    script(src="//widget.simplybook.it/v2/widget/widget.js" type="text/javascript").
+    script(type="text/javascript" src="./js/simplybook.js") 
+    //- script(type="text/javascript" var widget = new SimplybookWidget()).

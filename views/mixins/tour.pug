@@ -2,8 +2,9 @@ mixin tour(tour, fotos)
   .card.text-bg-light.border-info.border.border-3
     .card-header.bg-info.bg-gradient.text-body.fw-bold.fs-4
       .text-center
-        - var booktour = tour.tournaam + ' [book]'
-        a(href=tour.tblLink target="_blank").text-light= booktour
+        h3.text-light=tour.tournaam
+        //- - var booktour = tour.tournaam
+        //- a(href=tour.tblLink target="_blank").text-light= booktour
     .row.align-items-center
       - var id = tour.tournaam
       .col-5
